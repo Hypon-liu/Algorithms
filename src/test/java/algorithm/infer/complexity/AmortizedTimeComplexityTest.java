@@ -14,7 +14,7 @@ import static org.junit.Assert.*;
  */
 public class AmortizedTimeComplexityTest {
 
-    public static AmortizedTimeComplexity atc;
+    public AmortizedTimeComplexity atc;
 
     @Before
     public void load() throws Exception {

@@ -3,6 +3,8 @@ package algorithm.infer.complexity;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Arrays;
+
 import static org.junit.Assert.*;
 
 /**
@@ -11,31 +13,37 @@ import static org.junit.Assert.*;
  */
 public class AsymptoticTimeComplexityTest {
 
-    public static AsymptoticTimeComplexity atc;
+    public AsymptoticTimeComplexity atc;
+    public Integer[] arr;
 
     @Before
     public void load() throws Exception {
         atc = new AsymptoticTimeComplexity();
+        arr = new Integer[]{1, 2, 3, 4, 5, 6, 7, 8};
     }
 
     @Test
     public void cal() throws Exception {
-        atc.cal(1000000);
+        int cal = atc.cal(1000000);
+        System.out.println(cal);
     }
 
     @Test
     public void cal2() throws Exception {
-        atc.cal2(1000000);
+        int cal = atc.cal2(1000000);
+        System.out.println(cal);
     }
 
     @Test
     public void cal3() throws Exception {
-        atc.cal3(1000000);
+        int cal = atc.cal3(1000000);
+        System.out.println(cal);
     }
 
     @Test
     public void cal4() throws Exception {
-        atc.cal4(1000000,1000000);
+        int cal = atc.cal4(1000000, 1000000);
+        System.out.println(cal);
     }
 
     @Test
@@ -43,4 +51,10 @@ public class AsymptoticTimeComplexityTest {
         atc.calLog(1000000);
     }
 
+    @Test
+    public void binarySearch() {
+        Integer find = 8;
+        Integer idx = atc.binarySearch(arr, find);
+        System.out.println("binarySearch--->" + idx +",arr=" + Arrays.toString(arr) + ",find=" + find);
+    }
 }

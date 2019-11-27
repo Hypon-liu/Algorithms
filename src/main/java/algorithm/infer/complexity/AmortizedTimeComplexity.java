@@ -6,17 +6,18 @@ package algorithm.infer.complexity;
  * @Author: 0230958
  * @Date: 2019/11/7 15:00
  */
+@SuppressWarnings("checkstyle:SummaryJavadoc")
 public class AmortizedTimeComplexity {
 
     //array 标识一个长度为n的数组
     //代码中的array.length就等于n
     int n = 2;
     int[] array = new int[n];
-    int count = 0;
+    private int count = 0;
 
     /**
      * 往数组插入数据
-     *
+     * <p>
      * 总的时间复杂度：O(1)
      *
      * @param val

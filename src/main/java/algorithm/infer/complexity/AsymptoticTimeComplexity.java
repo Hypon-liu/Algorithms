@@ -126,4 +126,28 @@ public class AsymptoticTimeComplexity {
             i = i * 2;
         }
     }
+
+    /**
+     * 实践：
+     * 用二分法查询，用对数公式
+     * {1, 2, 3, 4, 5, 6, 7, 8}
+     */
+    Integer binarySearch(Integer[] arr, Integer num) {
+        int i = 0;
+        int j = arr.length - 1;
+        int mid;
+        while (i <= j) {
+            mid = (i + j) >> 1;
+            Integer guess = arr[mid];
+            System.out.println("i-->" + i + "j-->" + j + "mid-->" + mid + "guess-->" + guess);
+            if (guess.equals(num)) {
+                return mid;
+            } else if (guess > num) {
+                j = mid - 1;
+            } else {
+                i = mid + 1;
+            }
+        }
+        return null;
+    }
 }

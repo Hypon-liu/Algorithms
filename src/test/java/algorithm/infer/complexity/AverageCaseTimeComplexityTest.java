@@ -10,7 +10,7 @@ import org.junit.Test;
  */
 public class AverageCaseTimeComplexityTest {
 
-    public static AverageCaseTimeComplexity atc;
+    public AverageCaseTimeComplexity atc;
 
     @Before
     public void load() throws Exception {

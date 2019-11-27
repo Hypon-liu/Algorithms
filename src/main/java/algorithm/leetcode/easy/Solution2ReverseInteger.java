@@ -22,15 +22,9 @@ public class Solution2ReverseInteger {
      Output: 21
      */
 
-
-    /**
-     *
-     */
-
     /**
      * my Test
      */
-
     public int reverse(int x) {
         String prev = x < 0 ? "-" : "";
 
@@ -47,7 +41,7 @@ public class Solution2ReverseInteger {
             }
         }
 
-        return Integer.valueOf(prev+result);
+        return Integer.valueOf(prev + result);
 
         //throw new IllegalArgumentException("No reverse integer solution");
     }
@@ -67,4 +61,5 @@ public class Solution2ReverseInteger {
         }
         return rev;
     }
+
 }
