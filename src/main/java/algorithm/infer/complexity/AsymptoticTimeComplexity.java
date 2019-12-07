@@ -1,5 +1,8 @@
 package algorithm.infer.complexity;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 /**
  * 渐进时间复杂度，简称时间复杂度，是代码执行时间随着数据规模增长的变化趋势
  * <p>
@@ -149,5 +152,23 @@ public class AsymptoticTimeComplexity {
             }
         }
         return null;
+    }
+
+
+    /**
+     * 实践：
+     * 计算：1+2+3+4...+n
+     * 1到n的循环累加
+     * 求和公式：sum=n(n+1)/2
+     */
+    Integer toSum(Integer[] arr) {
+        Integer sumi = 0;
+        for (Integer i : arr) {
+            sumi += i;
+        }
+        return sumi;
+    }
+    Integer toSum2(Integer[] arr) {
+        return arr[arr.length - 1] * (arr[arr.length - 1] + 1) / 2;
     }
 }
